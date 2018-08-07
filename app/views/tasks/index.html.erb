@@ -1,0 +1,21 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sx-12 col-sm-6 col-md-4 col-md-offset-4">
+
+      <h1>My Tasks</h1>
+      <ul class="text-link">
+        <% @tasks.each do |task| %>
+          <li><%= link_to task.title, task_path(task) %></li>
+          <!--   <#% if task.completed %>
+            <#%= link_to task_path(task) do %>
+              <i class="fas fa-check-circle"></i>
+            <#% else %>
+            <i class="fal fa-check-circle"></i>
+             <#% end %>
+          <#% end %> -->
+        <% end %>
+      </ul>
+      <h4><%= link_to "New Task", tasks_new_path %></h4>
+    </div>
+  </div>
+</div>

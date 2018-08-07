@@ -1,0 +1,13 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sx-12 col-sm-6 col-md-4 col-md-offset-4">
+      <h1><%= @task.title %></h1>
+      <h5><%= @task.details %></h5>
+      <p><%= @task.completed %></p>
+
+      <%= link_to "Edit", edit_path(@task) %>
+      <%= link_to "Delete", delete_path(@task), method: :delete, data: { confirm: "Are you sure?" } %>
+      <%= link_to "Back Home", tasks_path %>
+    </div>
+  </div>
+</div>
